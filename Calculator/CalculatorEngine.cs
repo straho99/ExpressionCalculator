@@ -191,7 +191,7 @@
                 foreach (Match match in matches)
                 {
                     string currentExpression = match.Groups[1].Value;
-                    double result = CalculatorEngine.Calculate(currentExpression);
+                    double result = CalculateSimpleExpression(currentExpression);
                     text = text.Replace(match.Value, result.ToString());
                 }
                 matches = Regex.Matches(text, pattern);
